@@ -9,8 +9,10 @@ var app = express();
 
 var http = require("http");
 
-var MongoClient = require("mongodb").MongoClient;
 app.use(cors());
+
+var MongoClient = require("mongodb").MongoClient;
+
 app.get("/", (req, res) => {
   if (req.query.Year == 3) {
     console.log("this is 3rd year");
