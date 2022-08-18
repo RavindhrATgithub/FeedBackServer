@@ -1,8 +1,8 @@
 const { calculateObjectSize } = require("bson");
 const { response } = require("express");
-const e = require("express");
+
 var express = require("express")
-//const  mongoose  = require("mongoose")
+
 const cors = require("cors");
 const port = process.env.PORT || 3000;
 
@@ -22,7 +22,8 @@ app.get("/", (req, res) => {
     console.log("this is 3rd year");
 
     var url = "mongodb+srv://newUser:eXtG1fHdLfKLxWsc@firstdb.fp4ty.mongodb.net/mydb?retryWrites=true&w=majority"
-    MongoClient.connect(url, function (err, db) {
+    MongoClient.connect(url, function (err, db) 
+    {
       var flag = 1;
       if (err) throw err;
       var dbo = db.db("mydb");
@@ -146,7 +147,7 @@ app.get("/", (req, res) => {
         });
         
 
-        // this is second additional
+       
 
         MongoClient.connect(url, function (err, db) {
           if (err) throw err;
@@ -216,7 +217,7 @@ app.get("/", (req, res) => {
           dbo.close();
         });
 
-        //this is third additional
+        
 
 
         MongoClient.connect(url, function (err, db) {
