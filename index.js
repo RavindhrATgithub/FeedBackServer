@@ -13,6 +13,10 @@ app.use(cors());
 
 var MongoClient = require("mongodb").MongoClient;
 
+app.get("/test", (req, res) => {
+  res.send("hello from server");
+});
+
 app.get("/", (req, res) => {
   if (req.query.Year == 3) {
     console.log("this is 3rd year");
