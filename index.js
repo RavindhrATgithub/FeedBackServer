@@ -13,7 +13,7 @@ app.use(cors());
 
 var MongoClient = require("mongodb").MongoClient;
 
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
   res.send("hello from server");
 });
 
