@@ -3,7 +3,7 @@ const { response } = require("express");
 const e = require("express");
 var express = require("express");
 const cors = require("cors");
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 //const  mongoose  = require("mongoose")
 var app = express();
 
