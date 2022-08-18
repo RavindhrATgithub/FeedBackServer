@@ -4,7 +4,7 @@ const { response } = require("express");
 var express = require("express")
 
 const cors = require("cors");
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 var app = express()
 
@@ -33,8 +33,10 @@ app.get("/", (req, res) => {
 
         if (err) throw err;
 
-        else {
-          for (var i = 0; i < result.length; i++) {
+        else 
+        {
+          for (var i = 0; i < result.length; i++) 
+          {
 
             if (req.query.Username == result[i].UserName) {
               flag = 0;
@@ -45,7 +47,8 @@ app.get("/", (req, res) => {
 
           if (flag)
             setflag();
-          else {
+          else 
+          {
             res.send("<h2>!!!   You have already responded   !!!</h2>")
           }
         }
@@ -58,13 +61,15 @@ app.get("/", (req, res) => {
 
 
 
-      MongoClient.connect(url, function (err, db) {
+      MongoClient.connect(url, function (err, db) 
+      {
 
         if (err) throw err;
         var dbo = db.db("mydb");
 
         const UserName = { UserName: req.query.Username };
-        dbo.collection("UserName3").insertOne(UserName, function (err, res) {
+        dbo.collection("UserName3").insertOne(UserName, function (err, res)
+        {
           if (err) throw err;
           console.log("username entered ");
           console.log();
@@ -149,7 +154,8 @@ app.get("/", (req, res) => {
 
        
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, function (err, db) 
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -220,7 +226,8 @@ app.get("/", (req, res) => {
         
 
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, function (err, db) 
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -285,14 +292,15 @@ app.get("/", (req, res) => {
             console.log("1st subject inserted Addional ");
             console.log(sub3temp1 + "" + sub3temp2 + "" + sub3temp3 + "" + sub3temp4);
 
-          });dbo.close();
+          });db.close();
 
         });
 
 
         //this is fourth additional
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, function (err, db)
+         {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -358,13 +366,14 @@ app.get("/", (req, res) => {
             console.log(sub4temp1 + "" + sub4temp2 + "" + sub4temp3 + "" + sub4temp4);
 
           });
-          dbo.close();
+          db.close();
 
         });
 
         // this is fifth addional 
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, function (err, db) 
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -430,13 +439,14 @@ app.get("/", (req, res) => {
             console.log(sub5temp1 + "" + sub5temp2 + "" + sub5temp3 + "" + sub5temp4);
 
           });
-          dbo.close();
+          db.close();
         });
 
 
         //this is sixth addional
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, function (err, db) 
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -502,7 +512,7 @@ app.get("/", (req, res) => {
             console.log(sub6temp1 + "" + sub6temp2 + "" + sub6temp3 + "" + sub6temp4);
 
           });
-          dbo.close();
+          db.close();
         });
 
 
@@ -620,7 +630,7 @@ app.get("/", (req, res) => {
 
         });
 
-        dbo.close();
+        db.close();
 
       });
 
@@ -647,7 +657,8 @@ app.get("/", (req, res) => {
       if (err) throw err;
       var dbo = db.db("mydb");
 
-      dbo.collection("UserName2").find({}).toArray(function (err, result) {
+      dbo.collection("UserName2").find({}).toArray(function (err, result)
+       {
 
         if (err) throw err;
 
@@ -668,32 +679,36 @@ app.get("/", (req, res) => {
           }
         }
       });
-      dbo.close();
+      db.close();
     });
 
-    function setflag() {
+    function setflag() 
+    {
 
-      MongoClient.connect(url, function (err, db) {
+      MongoClient.connect(url, function (err, db) 
+      {
 
         if (err) throw err;
         var dbo = db.db("mydb");
 
         const UserName = { UserName: req.query.Username };
-        dbo.collection("UserName2").insertOne(UserName, function (err, res) {
+        dbo.collection("UserName2").insertOne(UserName, function (err, res)
+         {
           if (err) throw err;
           console.log("username entered ");
           console.log();
 
         });
 
-        dbo.close();
+        db.close();
 
 
       })
 
 
 
-      MongoClient.connect(url, function (err, db) {
+      MongoClient.connect(url, function (err, db) 
+      {
         if (err) throw err;
         var dbo = db.db("mydb");
 
@@ -762,7 +777,8 @@ app.get("/", (req, res) => {
 
       
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, function (err, db)
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -827,13 +843,12 @@ app.get("/", (req, res) => {
             console.log(sub2temp1 + "" + sub2temp2 + "" + sub2temp3 + "" + sub2temp4);
 
           });
-          dbo.close();
+          db.close();
         });
 
-        //this is third additional
-
-
-        MongoClient.connect(url, function (err, db) {
+        
+        MongoClient.connect(url, function (err, db) 
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -899,13 +914,14 @@ app.get("/", (req, res) => {
             console.log(sub3temp1 + "" + sub3temp2 + "" + sub3temp3 + "" + sub3temp4);
 
           });
-          dbo.close();
+          db.close();
         });
 
 
         //this is fourth additional
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, function (err, db) 
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -972,12 +988,13 @@ app.get("/", (req, res) => {
 
           });
 
-          dbo.close();
+          db.close();
         });
 
         // this is fifth addional 
 
-        MongoClient.connect(url, function (err, db) {
+        MongoClient.connect(url, function (err, db) 
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -1043,13 +1060,13 @@ app.get("/", (req, res) => {
             console.log(sub5temp1 + "" + sub5temp2 + "" + sub5temp3 + "" + sub5temp4);
 
           });
-          dbo.close();
+          db.close();
         });
 
 
-        //this is sixth addional
-
-        MongoClient.connect(url, function (err, db) {
+        
+        MongoClient.connect(url, function (err, db) 
+        {
           if (err) throw err;
           var dbo = db.db("mydb");
 
@@ -1115,10 +1132,10 @@ app.get("/", (req, res) => {
             console.log(sub6temp1 + "" + sub6temp2 + "" + sub6temp3 + "" + sub6temp4);
 
           });
-          dbo.close();
+          db.close();
         });
 
-        dbo.close();
+        db.close();
       });
 
 
@@ -1226,7 +1243,7 @@ app.get("/", (req, res) => {
 
 
 
-        dbo.close(); 
+        db.close(); 
       });
       res.send("<h1>Your responses has been recorded</h1>")
     }
@@ -1302,12 +1319,13 @@ app.get("/display", (req, res) =>
 
         }
       });
-      dbo.close();
+      db.close();
 
     });
 
 
-    function call(result) {
+    function call(result) 
+    {
       for (var i = 0; i < result.length; i++) {
         e += parseInt(result[i].Excellent);
         v += parseInt(result[i].VeryGood);
@@ -1417,7 +1435,8 @@ app.get("/display", (req, res) =>
     });
 
 
-    function call(result) {
+    function call(result)
+     {
       for (var i = 0; i < result.length; i++) {
         e += parseInt(result[i].Excellent);
         v += parseInt(result[i].VeryGood);
@@ -1529,7 +1548,7 @@ app.get("/add-display", (req, res) => {
 
         }
       });
-      dbo.close();
+      db.close();
     });
 
 
@@ -1676,7 +1695,7 @@ app.get("/add-display", (req, res) => {
 
         }
       });
-      dbo.close();
+      db.close();
     });
 
 
@@ -1757,7 +1776,7 @@ app.get("/add-display", (req, res) => {
 
 
 
-app.listen(port, () => {
+app.listen(PORT, () => {
 
 
 
