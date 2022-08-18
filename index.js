@@ -7,7 +7,6 @@ const port = process.env.PORT || 3000;
 //const  mongoose  = require("mongoose")
 var app = express();
 
-var http = require("http");
 
 app.use(cors());
 
@@ -1608,8 +1607,7 @@ app.get("/", (req, res) => {
 
 app.get("/display", (req, res) => {
   if (req.query.Ayear == 2) {
-    console.log("this is admin second year");
-    // window.alert("Welcome Ruba mam!")
+ 
     var url =
       "mongodb+srv://newUser:eXtG1fHdLfKLxWsc@firstdb.fp4ty.mongodb.net/mydb?retryWrites=true&w=majority";
     var e = 0,
@@ -1780,8 +1778,7 @@ app.get("/display", (req, res) => {
       s = 0;
     }
   } else {
-    console.log("this is admin third year");
-    //  window.alert("Welcome Manimala mam!")
+   
     var url =
       "mongodb+srv://newUser:eXtG1fHdLfKLxWsc@firstdb.fp4ty.mongodb.net/mydb?retryWrites=true&w=majority";
     var e = 0,
@@ -1969,10 +1966,8 @@ app.get("/display", (req, res) => {
 
 app.get("/add-display", (req, res) => {
   if (req.query.Ayear == 2) {
-    console.log("this is admin second year");
-    // window.alert("Welcome Ruba mam!")
+ 
 
-    console.log(http.send("hello"));
 
     var url =
       "mongodb+srv://newUser:eXtG1fHdLfKLxWsc@firstdb.fp4ty.mongodb.net/mydb?retryWrites=true&w=majority";
