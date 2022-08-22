@@ -2144,7 +2144,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results1+220)/100 +
+          (results1+=220)/100 +
             " marks / 5 marks</p>"
         );
         res.write(
@@ -2158,7 +2158,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-            (results2+220) / 100 +
+            (results2+=220) / 100 +
             " marks / 5 marks</p>"
         );
         res.write(
@@ -2172,12 +2172,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results3+220)/ 100 +
+          (results3+=220)/ 100 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          results3+220+
+          results3+
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2186,12 +2186,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-            (results4+220) / 100 +
+            (results4+=220) / 100 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-            results4+220 +
+            results4+
             "px;background-color:rgb(250,150,10);'></p>"
         );
        e1 = 0;
@@ -2405,61 +2405,61 @@ app.get("/add-display", (req, res) => {
         parseInt((s4 * 100) / result.length) * 2 +
         parseInt((s5 * 100) / result.length);
 
-      res.write(
-        "<p style='font-weight:bold;font-size:22px;'>1. Planning and Organisation</p>"
-      );
-      res.write(
-        "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-        (results1+220)/100 +
-          " marks / 5 marks</p>"
-      );
-      res.write(
-        "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-        results1+220  +
-          "px;background-color:rgb(250,150,10);'></p>"
-      );
-
-      res.write(
-        "<p style='font-weight:bold;font-size:22px;'>2. preparation</p>"
-      );
-      res.write(
-        "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results2+220) / 100 +
-          " marks / 5 marks</p>"
-      );
-      res.write(
-        "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-        results2+220 +
-          "px;background-color:rgb(250,150,10);'></p>"
-      );
-
-      res.write(
-        "<p style='font-weight:bold;font-size:22px;'>3. Student's participation</p>"
-      );
-      res.write(
-        "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-        (results3+220)/ 100 +
-          " marks / 5 marks</p>"
-      );
-      res.write(
-        "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-        results3+220+
-          "px;background-color:rgb(250,150,10);'></p>"
-      );
-
-      res.write(
-        "<p style='font-weight:bold;font-size:22px;'>4. Class management / Assessment of Students</p>"
-      );
-      res.write(
-        "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results4+220) / 100 +
-          " marks / 5 marks</p>"
-      );
-      res.write(
-        "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          results4+220 +
-          "px;background-color:rgb(250,150,10);'></p>"
-      );
+        res.write(
+          "<p style='font-weight:bold;font-size:22px;'>1. Planning and Organisation</p>"
+        );
+        res.write(
+          "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
+          (results1+=220)/100 +
+            " marks / 5 marks</p>"
+        );
+        res.write(
+          "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
+          results1+220  +
+            "px;background-color:rgb(250,150,10);'></p>"
+        );
+  
+        res.write(
+          "<p style='font-weight:bold;font-size:22px;'>2. preparation</p>"
+        );
+        res.write(
+          "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
+            (results2+=220) / 100 +
+            " marks / 5 marks</p>"
+        );
+        res.write(
+          "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
+          results2+220 +
+            "px;background-color:rgb(250,150,10);'></p>"
+        );
+  
+        res.write(
+          "<p style='font-weight:bold;font-size:22px;'>3. Student's participation</p>"
+        );
+        res.write(
+          "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
+          (results3+=220)/ 100 +
+            " marks / 5 marks</p>"
+        );
+        res.write(
+          "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
+          results3+
+            "px;background-color:rgb(250,150,10);'></p>"
+        );
+  
+        res.write(
+          "<p style='font-weight:bold;font-size:22px;'>4. Class management / Assessment of Students</p>"
+        );
+        res.write(
+          "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
+            (results4+=220) / 100 +
+            " marks / 5 marks</p>"
+        );
+        res.write(
+          "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
+            results4+
+            "px;background-color:rgb(250,150,10);'></p>"
+        );
 
       e1 = 0;
       v1 = 0;
