@@ -1718,7 +1718,7 @@ app.get("/display", (req, res) => {
           }
         });
         
-          db.close();
+        
     });
 
     function call(result) {
@@ -1904,7 +1904,7 @@ app.get("/display", (req, res) => {
             call(result);
           }
         });
-        db.close();
+       
     });
 
     function call(result) {
@@ -2112,7 +2112,7 @@ app.get("/add-display", (req, res) => {
             call(result);
           }
         });
-        db.close();
+        
     });
 
     function call(result) {
@@ -2381,7 +2381,7 @@ app.get("/add-display", (req, res) => {
             call(result);
           }
         });
-        db.close();
+        
     });
 
     function call(result) {
