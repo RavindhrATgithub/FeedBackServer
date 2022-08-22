@@ -1718,9 +1718,8 @@ app.get("/display", (req, res) => {
           }
         });
         
-        
+         
     });
-
     function call(result) {
       for (var i = 0; i < result.length; i++) {
         e += parseInt(result[i].Excellent);
@@ -2112,7 +2111,7 @@ app.get("/add-display", (req, res) => {
             call(result);
           }
         });
-        
+ 
     });
 
     function call(result) {
@@ -2381,7 +2380,7 @@ app.get("/add-display", (req, res) => {
             call(result);
           }
         });
-        
+    
     });
 
     function call(result) {
