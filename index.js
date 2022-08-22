@@ -2149,7 +2149,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          (results1+220)  +
+          results1+220  +
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2163,7 +2163,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          (results2+220) +
+          results2+220 +
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2177,7 +2177,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          (results3+220)+
+          results3+220+
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2191,10 +2191,10 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-            (results4+220) +
+            results4+220 +
             "px;background-color:rgb(250,150,10);'></p>"
         );
-      e1 = 0;
+       e1 = 0;
       v1 = 0;
       p1 = 0;
       g1 = 0;
@@ -2415,7 +2415,7 @@ app.get("/add-display", (req, res) => {
       );
       res.write(
         "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-        (results1+220)  +
+        results1+220  +
           "px;background-color:rgb(250,150,10);'></p>"
       );
 
@@ -2429,7 +2429,7 @@ app.get("/add-display", (req, res) => {
       );
       res.write(
         "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-        (results2+220) +
+        results2+220 +
           "px;background-color:rgb(250,150,10);'></p>"
       );
 
@@ -2443,7 +2443,7 @@ app.get("/add-display", (req, res) => {
       );
       res.write(
         "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-        (results3+220)+
+        results3+220+
           "px;background-color:rgb(250,150,10);'></p>"
       );
 
@@ -2457,7 +2457,7 @@ app.get("/add-display", (req, res) => {
       );
       res.write(
         "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          (results4+220) +
+          results4+220 +
           "px;background-color:rgb(250,150,10);'></p>"
       );
 
