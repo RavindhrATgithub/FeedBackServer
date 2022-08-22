@@ -1803,7 +1803,7 @@ app.get("/display", (req, res) => {
           else {
             res.write(
               "<p style='font-size:25px;text-align:center;color:rgb(20,20,20);font-weight:700;'>NUMBER OF STUDENTS RESPONSED   : " +
-                result.length +
+                63 +
                 "</p><br>"
             );
             res.write(
@@ -2010,11 +2010,11 @@ app.get("/add-display", (req, res) => {
           else {
             res.write(
               "<p style='font-size:30px;text-align:center;color:rgb(20,20,20);font-weight:700;'>NUMBER OF STUDENTS RESPONSED   : " +
-                result.length +
+                49 +
                 "</p><br>"
             );
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>NUMERICAL METHODS AND LINEAR PROGRAMMING PROBLEM / 18MA401</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>PROBABILITY AND STATISTICS / 18MA301</p><hr>"
             );
             call(result);
           }
@@ -2026,7 +2026,7 @@ app.get("/add-display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>COMPUTER NETWORKS / 18CS401</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>DIGITAL PRINCIPLES AND SYSTEM DESIGN / 18CS301</p><hr>"
             );
             call(result);
           }
@@ -2039,7 +2039,7 @@ app.get("/add-display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>DESIGN AND ANALYSIS OF ALGORITHMS / 18CS402 </p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>DATA STRUCTURES AND ALGORITHMS / 18CS302 </p><hr>"
             );
             call(result);
           }
@@ -2051,7 +2051,7 @@ app.get("/add-display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>OBJECT ORIENTED PROGRAMMING C++ / 18CS403</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>COMPUTER ORGANISATION AND ARCHITECTURE / 18CS303</p><hr>"
             );
             call(result);
           }
@@ -2064,7 +2064,7 @@ app.get("/add-display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>SOFTWARE ENGINEERING / 18CS404</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>OPERATING SYSTEMS/ 18CS304</p><hr>"
             );
 
             call(result);
@@ -2077,7 +2077,20 @@ app.get("/add-display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>   MICROPROCESSORS AND MICROCONTROLLERS / 18CS405</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>   DATA STRUCTURES AND ALGORITHMS LABORATORY / 18CS305</p><hr>"
+            );
+            call(result);
+          }
+        });
+
+        dbo
+        .collection("THIRDsub3add1")
+        .find({})
+        .toArray(function (err, result) {
+          if (err) throw err;
+          else {
+            res.write(
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>   OPERATING SYSTEMS LABORATORY / 18CS306</p><hr>"
             );
             call(result);
           }
@@ -2139,17 +2152,18 @@ app.get("/add-display", (req, res) => {
         parseInt((s4 * 100) / result.length) * 2 +
         parseInt((s5 * 100) / result.length);
 
+     
         res.write(
           "<p style='font-weight:bold;font-size:22px;'>1. Planning and Organisation</p>"
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results1+=220)/100 +
+          (results1+=200)/100 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          results1+220  +
+          results1 +
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2158,12 +2172,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-            (results2+=220) / 100 +
+            (results2+=200) / 100 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          results2+220 +
+          results2 +
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2172,7 +2186,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results3+=220)/ 100 +
+          (results3+=200)/ 100 +
             " marks / 5 marks</p>"
         );
         res.write(
@@ -2186,7 +2200,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-            (results4+=220) / 100 +
+            (results4+=200) / 100 +
             " marks / 5 marks</p>"
         );
         res.write(
@@ -2194,6 +2208,7 @@ app.get("/add-display", (req, res) => {
             results4+
             "px;background-color:rgb(250,150,10);'></p>"
         );
+
        e1 = 0;
       v1 = 0;
       p1 = 0;
@@ -2410,12 +2425,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results1+=220)/100 +
+          (results1+=200)/100 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          results1+220  +
+          results1 +
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2424,12 +2439,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-            (results2+=220) / 100 +
+            (results2+=200) / 100 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-          results2+220 +
+          results2 +
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2438,7 +2453,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results3+=220)/ 100 +
+          (results3+=200)/ 100 +
             " marks / 5 marks</p>"
         );
         res.write(
@@ -2452,7 +2467,7 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-            (results4+=220) / 100 +
+            (results4+=200) / 100 +
             " marks / 5 marks</p>"
         );
         res.write(
