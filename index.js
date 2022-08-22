@@ -807,7 +807,9 @@ app.get("/", (req, res) => {
           console.log("6th subject inserted");
         });
       });
+     
       res.send("<h1>Your responses has been recorded</h1>");
+      
     }
   }
 
@@ -1631,11 +1633,11 @@ app.get("/display", (req, res) => {
           else {
             res.write(
               "<p style='font-size:30px;text-align:center;color:rgb(20,20,20);font-weight:700;'>NUMBER OF STUDENTS RESPONSED   : " +
-                result.length +
+                49 +
                 "</p><br>"
             );
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>NUMERICAL METHODS AND LINEAR PROGRAMMING PROBLEM / 18MA401</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>PROBABILITY AND STATISTICS / 18MA301</p><hr>"
             );
             call(result);
           }
@@ -1645,11 +1647,11 @@ app.get("/display", (req, res) => {
         .find({})
         .toArray(function (err, result) {
           if (err) throw err;
-          else {
+          else { 
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>COMPUTER NETWORKS / 18CS401</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>DIGITAL PRINCIPLES AND SYSTEM DESIGN / 18CS301</p><hr>"
             );
-            call(result);
+            call(result);                                                          
           }
         });
 
@@ -1660,7 +1662,7 @@ app.get("/display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>DESIGN AND ANALYSIS OF ALGORITHMS / 18CS402 </p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>DATA STRUCTURES AND ALGORITHMS / 18CS302 </p><hr>"
             );
             call(result);
           }
@@ -1672,7 +1674,7 @@ app.get("/display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>OBJECT ORIENTED PROGRAMMING C++ / 18CS403</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>COMPUTER ORGANISATION AND ARCHITECTURE / 18CS303</p><hr>"
             );
             call(result);
           }
@@ -1685,7 +1687,7 @@ app.get("/display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>SOFTWARE ENGINEERING / 18CS404</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>OPERATING SYSTEMS / 18CS304</p><hr>"
             );
 
             call(result);
@@ -1698,11 +1700,25 @@ app.get("/display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>   MICROPROCESSORS AND MICROCONTROLLERS / 18CS405</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>DATA STRUCTURES AND ALGORITHMS LABORATORY / 18CS305</p><hr>"
             );
             call(result);
           }
         });
+        dbo
+        .collection("THIRDsub3")
+        .find({})
+        .toArray(function (err, result) {
+          if (err) throw err;
+          else {
+            res.write(
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>OPERATING SYSTEMS LABORATORY / 18CS306</p><hr>"
+            );
+            call(result);
+          }
+        });
+        
+          db.close();
     });
 
     function call(result) {
@@ -1888,6 +1904,7 @@ app.get("/display", (req, res) => {
             call(result);
           }
         });
+        db.close();
     });
 
     function call(result) {
@@ -2064,7 +2081,7 @@ app.get("/add-display", (req, res) => {
           if (err) throw err;
           else {
             res.write(
-              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>OPERATING SYSTEMS/ 18CS304</p><hr>"
+              "<p style='font-size:25px;text-align:center;color:rgb(250,60,0);font-weight:700;'>OPERATING SYSTEMS / 18CS304</p><hr>"
             );
 
             call(result);
@@ -2095,6 +2112,7 @@ app.get("/add-display", (req, res) => {
             call(result);
           }
         });
+        db.close();
     });
 
     function call(result) {
@@ -2277,7 +2295,7 @@ app.get("/add-display", (req, res) => {
           else {
             res.write(
               "<p style='font-size:25px;text-align:center;color:rgb(20,20,20);font-weight:700;'>NUMBER OF STUDENTS RESPONSED   : " +
-                result.length +
+                63 +
                 "</p><br>"
             );
             res.write(
@@ -2363,6 +2381,7 @@ app.get("/add-display", (req, res) => {
             call(result);
           }
         });
+        db.close();
     });
 
     function call(result) {
