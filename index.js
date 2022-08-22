@@ -2144,12 +2144,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-            (results1 / 100)+2 +
+            (results1 / 100)*1.5 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-            results1+200 +
+            (results1*1.5) +
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2158,12 +2158,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results2 / 100)+2 +
+          (results2 / 100)*1.5 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-            (results2+200) +
+            (results2*1.5) +
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2172,12 +2172,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results3 / 100)+2 +
+          (results3 / 100)*1.5 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-            (results3 +200)+
+            (results3 *1.5)+
             "px;background-color:rgb(250,150,10);'></p>"
         );
   
@@ -2186,12 +2186,12 @@ app.get("/add-display", (req, res) => {
         );
         res.write(
           "<p style='font-weight:bold;'> Overall marks : &nbsp; &nbsp; " +
-          (results4 / 100)+2 +
+          (results4 / 100)*1.5 +
             " marks / 5 marks</p>"
         );
         res.write(
           "<p style='height:25px;border:1px solid black;border-radius:5px;width:" +
-            (results4+200)+
+            (results4*1.5)+
             "px;background-color:rgb(250,150,10);'></p>"
         );
       e1 = 0;
